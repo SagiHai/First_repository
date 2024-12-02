@@ -1,3 +1,11 @@
+# first of all I added the 'jupyter' package to the development tools list (dev)
+#    under [project.optional-dependencies]. 
+# after this addition VSCode automatically suggested installing
+#    the appropriate extension.
+# after installing the extension, I was running the installation command:
+#    pip install -e .[dev]
+# now finally the new package is installed
+
 [build-system]
 requires = ["setuptools>=68", "setuptools_scm[toml]>=8"]
 build-backend = "setuptools.build_meta"
@@ -12,7 +20,7 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = [
-    "tox",
+    "tox", "jupyter",
     "my-project[lint]",
     "my-project[test]",
     "my-project[doc]",
